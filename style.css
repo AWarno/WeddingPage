@@ -1,0 +1,129 @@
+.header {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 50px;
+}
+
+.subheader {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 20px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  margin: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  text-align: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-size: cover;
+  /* background-size: contain; */
+}
+
+.card:hover {
+  transform: scale(1.1);
+  filter: brightness(120%);
+}
+
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    width: 50%;
+    margin: 20px 5px;
+  }
+}
+
+
+.counter-and-next-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin: 20px;
+    padding: 20px;
+  }
+
+
+  .counter-and-next-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .counter {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  .next-button {
+    display: inline-block;
+  }
+
+  .next-arrow {
+    border: solid green;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 3px;
+    margin-top: 5px;
+    animation: pulse 1s infinite;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+@keyframes pulse {
+    0% {
+        transform: rotate(-45deg) scale(1);
+        -webkit-transform: rotate(-45deg) scale(1);
+    }
+    50% {
+        transform: rotate(-45deg) scale(1.8);
+        -webkit-transform: rotate(-45deg) scale(1.8s);
+    }
+    100% {
+        transform: rotate(-45deg) scale(1);
+        -webkit-transform: rotate(-45deg) scale(1);
+    }
+}
+
+
+  .next-arrow:hover {
+    filter: brightness(150%);
+    transform: rotate(-45deg) scale(1.5);
+    -webkit-transform: rotate(-45deg) scale(1.5);
+    cursor: pointer;
+  }
+
+
+  .disabled {
+    /* opacity: 0.5; */
+    pointer-events: none;
+    cursor: none;
+    filter: none;
+    animation: none;
+  }
+
+  .card.disabled {
+    transform: none;
+  }
+
+  .next-arrow.disabled{
+    border-color: grey;
+    transform: rotate(-45deg) scale(1.);
+    -webkit-transform: rotate(-45deg) scale(1.);
+  }
