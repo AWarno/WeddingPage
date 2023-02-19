@@ -1,6 +1,19 @@
 
 import data from './data.json';
-import confetti from 'confetti-js';
+import * as CryptoJS from 'crypto-js';
+import * as fs from 'fs';
+
+const plaintext = 'secret message';
+const passphrase = 'secret passphrase';
+
+// Encrypt the message using AES
+const ciphertext = CryptoJS.AES.encrypt(plaintext, passphrase).toString();
+console.log('Ciphertext:', ciphertext);
+
+// Decrypt the ciphertext using AES
+const bytes = CryptoJS.AES.decrypt(ciphertext, passphrase);
+const decryptedMessage = bytes.toString(CryptoJS.enc.Utf8);
+console.log('Decrypted message:', decryptedMessage);
 
 
 const cardsContainer = document.getElementById("card-container");
@@ -21,6 +34,9 @@ correctCards.set(5, 1);
 
 let maxPage = correctCards.size
 
+
+
+
 // Function to update the cards for a given page
 const updateCards = (page: number) => {
   const correctCard = correctCards.get(page);
@@ -40,8 +56,10 @@ const updateCards = (page: number) => {
       const card = document.createElement("div");
       card.classList.add("card");
       card.setAttribute("id", `card${i}`);
-      card.style.backgroundImage = `url(images/image.jpg)`;
-      // card.style.backgroundImage = `url(card${page}-${i}.jpg)`;
+
+      
+      // card.style.backgroundImage = `url(images/cards.png)`;
+      card.style.backgroundImage = `url(images/card${page}-${i}.jpg)`;
 
       card.addEventListener("click", handleCardClick);
 
