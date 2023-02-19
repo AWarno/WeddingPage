@@ -99,19 +99,6 @@ function endGame(score, maxPoints) {
     const percentCorrect = Math.round((score / maxPoints) * 100);
     // Create the alert message
     const message = `Your score: ${score}/${maxPoints} (${percentCorrect}%)`;
-    // Create a new canvas element and add it to the body
-    const canvas = document.createElement('canvas');
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    canvas.style.zIndex = '9999'; // ensure canvas is visible above other elements
-    document.body.appendChild(canvas);
-    // confetti({
-    //   angle: randomInRange(55, 125),
-    //   spread: randomInRange(50, 70),
-    //   particleCount: randomInRange(50, 100),
-    //   origin: { y: 0.6 },
-    // });
-    // Show the alert message
     alert(message);
 }
 arrow === null || arrow === void 0 ? void 0 : arrow.addEventListener("click", handleArrowClick);
