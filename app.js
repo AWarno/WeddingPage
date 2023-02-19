@@ -1,5 +1,4 @@
 import data from './data.json';
-import confetti from 'confetti-js';
 const cardsContainer = document.getElementById("card-container");
 const counter = document.getElementById("counter");
 const arrow = document.getElementById("next-arrow");
@@ -106,12 +105,12 @@ function endGame(score, maxPoints) {
     canvas.height = window.innerHeight;
     canvas.style.zIndex = '9999'; // ensure canvas is visible above other elements
     document.body.appendChild(canvas);
-    confetti({
-        angle: randomInRange(55, 125),
-        spread: randomInRange(50, 70),
-        particleCount: randomInRange(50, 100),
-        origin: { y: 0.6 },
-    });
+    // confetti({
+    //   angle: randomInRange(55, 125),
+    //   spread: randomInRange(50, 70),
+    //   particleCount: randomInRange(50, 100),
+    //   origin: { y: 0.6 },
+    // });
     // Show the alert message
     alert(message);
 }
