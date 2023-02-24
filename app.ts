@@ -1,7 +1,6 @@
 
 import data from './data.json';
 import * as CryptoJS from 'crypto-js';
-import * as fs from 'fs';
 
 const plaintext = 'secret message';
 const passphrase = 'secret passphrase';
@@ -146,10 +145,14 @@ function endGame(score: number, maxPoints: number) {
   // Calculate the percentage of correct answers
   const percentCorrect = Math.round((score / maxPoints) * 100);
 
-  // Create the alert message
+  // Create the message
   const message = `Your score: ${score}/${maxPoints} (${percentCorrect}%)`;
+
   alert(message);
 }
+
+
+
 
 
 arrow?.addEventListener("click", handleArrowClick)

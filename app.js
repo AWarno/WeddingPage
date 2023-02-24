@@ -1,5 +1,21 @@
 import data from './data.json';
 import * as CryptoJS from 'crypto-js';
+import swal from 'sweetalert';
+const options = {
+    title: 'Hello',
+    text: 'Welcome to SweetAlert!',
+    icon: 'success',
+    buttons: {
+        confirm: {
+            text: 'OK',
+            value: true,
+            visible: true,
+            className: 'btn btn-primary',
+            closeModal: true
+        }
+    }
+};
+swal(options);
 const plaintext = 'secret message';
 const passphrase = 'secret passphrase';
 // Encrypt the message using AES
@@ -107,7 +123,7 @@ function randomInRange(min, max) {
 function endGame(score, maxPoints) {
     // Calculate the percentage of correct answers
     const percentCorrect = Math.round((score / maxPoints) * 100);
-    // Create the alert message
+    // Create the message
     const message = `Your score: ${score}/${maxPoints} (${percentCorrect}%)`;
     alert(message);
 }
