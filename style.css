@@ -1,9 +1,11 @@
 .header {
   text-align: center;
-  font-size: 36px;
+  font-size: 48px; /* increase the font size to 48px */
   font-weight: bold;
   margin-top: 50px;
+  width: 100%; /* set the width to 100% */
 }
+
 
 .subheader {
   text-align: center;
@@ -33,7 +35,9 @@
 }
 
 @media screen and (max-width: 768px) {
-  .header{min-width:100%;}
+  .header{
+    font-size: 36px; /* decrease the font size back to 36px */
+  }
   .card-container{min-width:100% !important;}
 }
 
