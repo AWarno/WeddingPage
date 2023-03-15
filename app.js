@@ -1,21 +1,8 @@
 import data from './data.json';
 import * as CryptoJS from 'crypto-js';
 import swal from 'sweetalert';
-const options = {
-    title: 'Hello',
-    text: 'Welcome to SweetAlert!',
-    icon: 'success',
-    buttons: {
-        confirm: {
-            text: 'OK',
-            value: true,
-            visible: true,
-            className: 'btn btn-primary',
-            closeModal: true
-        }
-    }
-};
-swal(options);
+import confetti from 'confetti-js';
+
 const plaintext = 'secret message';
 const passphrase = 'secret passphrase';
 // Encrypt the message using AES
@@ -124,8 +111,22 @@ function endGame(score, maxPoints) {
     // Calculate the percentage of correct answers
     const percentCorrect = Math.round((score / maxPoints) * 100);
     // Create the message
-    const message = `Your score: ${score}/${maxPoints} (${percentCorrect}%)`;
-    alert(message);
+    const options = {
+        title: 'Game over!',
+        text: `your score: ${score}/${maxPoints} (${percentCorrect}%)`,
+        icon: 'success',
+        buttons: {
+          confirm: {
+            text: 'OK',
+            value: true,
+            visible: true,
+            className: 'btn btn-primary',
+            closeModal: true
+          }
+        }
+      };
+      
+      swal(options)
 }
 arrow === null || arrow === void 0 ? void 0 : arrow.addEventListener("click", handleArrowClick);
 // Disable arrow button

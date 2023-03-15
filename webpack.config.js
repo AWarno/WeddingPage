@@ -2,7 +2,7 @@
 const path = require('path');
 
 module.exports = {
-  entry: './app.ts',
+  entry: './app.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
@@ -11,7 +11,7 @@ module.exports = {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        use: 'js-loader',
         exclude: /node_modules/
       }
     ]
