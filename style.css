@@ -32,19 +32,24 @@
   /* background-size: contain; */
 }
 
-@media (max-width: 500px) {
+@media screen and (max-width: 768px) {
+  .header{min-width:100%;}
+  .card-container{min-width:100% !important;}
+}
+
+/* @media (max-width: 500px) {
   .card-container {
     /* display: inline-block; */
     /* justify-content: center; */
-    /* flex-wrap: wrap; */
+    /* flex-wrap: wrap;
     margin-top: 250px;
   }
   .card {
     width: 50%;
     /* height: auto; */
-    margin: 10px 5px;
+    /* margin: 10px 5px;
   }
-}
+} */ */ */
 /* 
   .card {
     width: 100%;
