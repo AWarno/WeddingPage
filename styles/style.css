@@ -1,71 +1,36 @@
-html {
-  font-size: 16px; /* set the base font size for the document */
-}
-
-.header {
-  text-align: center;
-  font-size: 3rem; /* increase the font size to 48px */
-  font-weight: bold;
-  margin-top: 3.125rem; /* convert 50px to rem */
-  width: 100%; /* set the width to 100% */
-}
-
-.subheader {
-  text-align: center;
-  font-size: 1.5rem; /* convert 24px to rem */
-  margin-top: 1.25rem; /* convert 20px to rem */
-}
-
 .card-container {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 15.625rem; /* convert 250px to rem */
+  margin-top: 250px; /* set margin top to 25% of the viewport width */
 }
 
 .card {
-  width: 12.5em; /* convert 200px to em */
-  height: 18.75em; /* convert 300px to em */
-  /* margin: 20px; */
-  box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.2), 0 0.375em 1.25em 0 rgba(0, 0, 0, 0.19);
-  border-radius: 0.625em; /* convert 10px to em */
+  width: 200px; /* set width to 20% of the viewport width */
+  height: 250px; /* set height to 30% of the viewport width */
+  margin: 2vw; /* set margin to 2% of the viewport width */
+  box-shadow: 0 0.4vw 0.8vw 0 rgba(0, 0, 0, 0.2),
+              0 0.6vw 2vw 0 rgba(0, 0, 0, 0.19); /* set box shadow using vw units */
+  border-radius: 1vw; /* set border radius to 1% of the viewport width */
   text-align: center;
   background-repeat: no-repeat;
   overflow: hidden;
   background-size: cover;
-  /* background-size: contain; */
+  /* margin-top: 15vh; */
 }
 
-
-@media screen and (max-width: 768px) {
-  .header{
-    font-size: 48px; /* decrease the font size back to 36px */
-  }
-  .card-container{min-width:100% !important;}
-}
-
-/* @media (max-width: 500px) {
+@media (max-width: 500px) {
   .card-container {
-    /* display: inline-block; */
-    /* justify-content: center; */
-    /* flex-wrap: wrap;
-    margin-top: 250px;
+    width: 60vw;
+    display: block;
+    margin: 30vh auto 0; /* center the container horizontally and set top margin to 15vw */
   }
   .card {
-    width: 50%;
-    /* height: auto; */
-    /* margin: 10px 5px;
+    width: 40vw;
+    height: 60vw;
+    margin: 1vw auto; /* center the card horizontally */
   }
-} */ */ */
-/* 
-  .card {
-    width: 100%;
-    height: auto;
-    max-width: 200px;
-    margin: 20px auto;
-    transform-origin: center top;
-    transform: scale(1);
-  } */
+}
 
 .card:hover {
   transform: scale(1.1);
@@ -79,20 +44,12 @@ html {
   margin-top: 20px;
 }
 
-/* @media (max-width: 500px) {
-  .card {
-    width: 50%;
-    margin: 10px 5px;
-  }
-} */
-
-
 .counter-and-next-button {
     display: flex;
     justify-content: center;
     margin-top: 10px;
     margin: 20px;
-    padding: 20px;
+    padding: 10px;
   }
 
 

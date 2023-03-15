@@ -1,0 +1,20 @@
+/* Set font sizes for different screen sizes using rem units */
+.header {
+    text-align: center;
+    font-size: 2.25rem; /* 36px / 16px = 2.25rem */
+    font-weight: bold;
+    margin-top: 3.125rem; /* 50px / 16px = 3.125rem */
+  }
+  
+  .subheader {
+    text-align: center;
+    font-size: 1.5rem; /* 24px / 16px = 1.5rem */
+    margin-top: 1.25rem; /* 20px / 16px = 1.25rem */
+  }
+
+/* Use media queries to adjust font size for smaller screens */
+@media (max-width: 768px) {
+    html {
+      font-size: 12px; /* decrease the base font size for smaller screens */
+    }
+  }

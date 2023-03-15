@@ -1,6 +1,21 @@
 import data from './data.json';
 import * as CryptoJS from 'crypto-js';
-
+import swal from 'sweetalert';
+const options = {
+    title: 'Hello',
+    text: 'Welcome to SweetAlert!',
+    icon: 'success',
+    buttons: {
+        confirm: {
+            text: 'OK',
+            value: true,
+            visible: true,
+            className: 'btn btn-primary',
+            closeModal: true
+        }
+    }
+};
+swal(options);
 const plaintext = 'secret message';
 const passphrase = 'secret passphrase';
 // Encrypt the message using AES
@@ -10,8 +25,6 @@ console.log('Ciphertext:', ciphertext);
 const bytes = CryptoJS.AES.decrypt(ciphertext, passphrase);
 const decryptedMessage = bytes.toString(CryptoJS.enc.Utf8);
 console.log('Decrypted message:', decryptedMessage);
-
-
 const cardsContainer = document.getElementById("card-container");
 const counter = document.getElementById("counter");
 const arrow = document.getElementById("next-arrow");
