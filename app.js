@@ -105,7 +105,14 @@ function endGame(score, maxPoints) {
     const options = {
         title: 'Game over!',
         text: `your score: ${score}/${maxPoints} (${percentCorrect}%)`,
-        icon: 'success',
+        icon: false,
+        content: {
+          element: "img",
+          attributes: {
+            src: "https://media.tenor.com/images/ebe0711320176546321d82d3b1f89574/tenor.gif",
+            style: "width: 60%;"
+          }
+        },
         buttons: {
           confirm: {
             text: 'OK',
@@ -117,7 +124,8 @@ function endGame(score, maxPoints) {
         }
       };
       
-      swal(options)
+      swal(options);
+      
 }
 arrow === null || arrow === void 0 ? void 0 : arrow.addEventListener("click", handleArrowClick);
 // Disable arrow button
