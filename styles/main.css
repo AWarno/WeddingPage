@@ -1,5 +1,5 @@
 *{
-    margin: 0;
+    /* margin: 0; */
     padding: 0;
     box-sizing: border-box;
     transition: all 0.4s;
@@ -28,7 +28,7 @@
     position: fixed;
     line-height: 65px;
     text-align: center;
-    background-color: rgba(197, 216, 202, 1);;
+    background-color: rgba(197, 216, 202, 1);
     top: 0;
     left: 0;
     z-index: 1;
@@ -52,7 +52,7 @@
 }
 
 .nav div.main_list{
-    width: 600px;
+    width: 650px;
     height: 65px;
     float: right;
 }
@@ -183,7 +183,7 @@
     
     .nav div.main_list{
         width: 100%;
-        margin-top: 65px;
+        margin-top: 2em;
         height: 0px;
         overflow: hidden;
     }
@@ -204,7 +204,7 @@
     .nav div.main_list ul li{
         width: 100%;
         height: 40px;
-        background-color:rgba(172,218,180,1);
+        background-color:rgba(197, 216, 202, 1);
     }
     
     .nav div.main_list ul li a{
@@ -224,9 +224,16 @@
     background-color: #3c6e6d; /* Replace with your desired color */
     color: #fff; /* Set text color to white for contrast */
     padding: 10px 20px; /* Adjust padding to your liking */
-    border-radius: 2px; /* Add rounded corners to the button */
+    border-radius: 1em; /* Add rounded corners to the button */
     text-decoration: none; /* Remove underline from link */
+    transition: all 0.3s ease-in-out; /* Add transition for smooth effect */
   }
+
+  .rsvp-button:hover {
+    background-color: #486e6d; /* Increase brightness on hover */
+    padding: 12px 24px; /* Increase size on hover */
+    border-radius: 1em;
+}
 
 .title {
     font-family: "Your abstract font name here", sans-serif;
@@ -258,12 +265,102 @@
 @media screen and (min-width: 500px) {
 /* for screens with a width of 1024px or more */
 .svg-container {
-    width: 60%; /* reduce the width to 60% */
+    width: 60%; 
 }
 }
+
+@media screen and (max-width: 500px) {
+    /* for screens with a width of 1024px or more */
+    .svg-container {
+        min-width: 90vw; 
+    }
+    }
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+
+  .text-container {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
   
-  
-  
-  
-  
+  .text-container h1 {
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+  }
+
+  .text-container h4 {
+    /* font-size: 80px; */
+    color: rgb(255, 255, 255);
+    text-decoration: underline overline;
+  }
+
+html {
+    /* font-size: 80px; */
+    color: rgb(255, 255, 255);
+  }
+
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+.text-content {
+    margin: 2em;
+  }
+
+.colored-background{
+    background-color: rgba(197, 216, 202, 1);
+}
+
+.gray-background{
+    background-color: rgb(212, 210, 210);
+}
+
+
+video {
+    width: 50vw;
+    height: auto;
+  }
+
+
+
+    
+  @media screen and (max-width: 600px) {
+    .content {
+      flex-direction: column;
+    }
+  }
+
+  .text-wedding {
+    left: 0;
+    right: 0;
+    margin-top: 20px;
+    text-align: center;
+  }
+
+.image-container{
+    border-radius: 1em;
+	box-shadow: 0 0 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+    background-image: url("../images/localization.png");
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+    max-width: 200px;
+    min-width: 30vw;
+    min-height: 45vw;
+}
+
+
   

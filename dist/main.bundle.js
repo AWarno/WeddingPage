@@ -1,0 +1,1 @@
+(()=>{var t=document.getElementById("mainListDiv"),e=document.getElementById("mediaButton");e.onclick=function(){"use strict";t.classList.toggle("show_list"),e.classList.toggle("active")}})();

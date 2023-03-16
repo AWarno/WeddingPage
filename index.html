@@ -1,1 +1,76 @@
-<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="stylesheet" type="text/css" href="styles/style.css"><link rel="stylesheet" type="text/css" href="styles/fonts.css"><link rel="stylesheet" type="text/css" href="styles/header.css"><link rel="stylesheet" type="text/css" href="styles/particles.css"></head><body><div class="container"><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div><div class="circle-container"><div class="circle"></div></div></div><div class="container"><div class="sticky-header"><div class="header">Welcome to our wedding!</div><div class="subheader">Pick the correct card</div><div class="counter-and-next-button"><div class="dixit-phrase" id="dixit-phrase"></div><div class="counter" id="counter"></div><div class="next-button"><div class="next-arrow" id="next-arrow"></div></div></div></div><div class="card-container" id="card-container"></div></div><script src="dist/bundle.js"></script></body></html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+  </head>
+  <body>
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScGaJbaOZcdIkBpoTjHVsYzPtGFuvXz5Cd21QLh7-Ugb-yjjw/viewform?usp=sf_link" class="rsvp-button">RSVP</a>
+            </div>
+            <div class="main_list" id="mainListDiv">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#our-story">Our story</a></li>
+                    <li><a href="#wedding">Wedding</a></li>
+                    <li><a href="#getting-there">Getting there</a></li>
+                    <li><a href="game.html">Game</a></li>
+                </ul>
+            </div>
+            <div class="media_button">
+                <button class="main_media_button" id="mediaButton">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+        
+    <section class="home" id="home">
+        <div class="wrapper">
+            <div class="svg-container">
+              <object type="image/svg+xml" data="images/landing_page2.svg"></object>
+            </div>
+            <div class="text-container absolute">
+              <h1>Ania &amp; Mateusz</h1>
+              <h4>17.06.2023</h4>
+            </div>
+          </div>  
+      </section>
+
+      <section class="content colored-background" id="our-story">
+        <h2>Our Story</h2>
+        <p>Watch the video below to learn more about our love story.</p>
+        <div class="video-container">
+            <video controls>
+                <source src="images/our_story.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+
+      </section>
+
+      <section class="wedding content gray-background wrapped" id="wedding">
+        <div class="text-wedding">
+          <h2>Wedding</h2>
+          <p class="italic">Save the date!</p>
+          <p class="bold">wedding: <span class="date">17.06.2023</span> 15:00</p>
+          <p class="address">adres: podkowa Stanisława Lilpopa 17</p> 
+          <p class="address">wedding reception: the same adres</p>
+        </div>
+        <div class="image-container">
+            <!-- <img src="images/localization.png" class="location-img"> -->
+        </div>
+      </section>
+
+      <section class="content colored-background" id="getting-there">
+        <h2>Getting there</h2>
+        <div class="mapouter"><div class="gmap_canvas"><iframe width="301" height="322" id="gmap_canvas" src="https://maps.google.com/maps?q=podkowa leśna lilpopa 17&t=&z=10&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://2yu.co">2yu</a><br><style>.mapouter{position:relative;text-align:right;height:322px;width:301px;}</style><a href="https://embedgooglemap.2yu.co">html embed google map</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:322px;width:301px;}</style></div></div>
+
+      </section>
+
+    <script src="dist/main.bundle.js"></script>
+  </body>
+</html>
