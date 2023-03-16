@@ -1,4 +1,12 @@
 html {
-    font-family: Arial, sans-serif;
+    font-family: 'Courier New', sans-serif;
     font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    
   }
+
+#dixit-phrase {
+  color: rgb(255, 255, 255);
+  font-style: italic;
+  margin-right: 2em;
+}

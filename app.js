@@ -51,11 +51,11 @@ const handleCardClick = (event) => {
         selectedCard.style.boxShadow = "";
     }
     if (selectedCard.id == `card${correctCards.get(page)}`) {
-        selectedCard.style.boxShadow = "0px 0px 10px 2px rgba(0, 255, 0, 0.75)";
+        selectedCard.style.boxShadow = "0px 0px 15px 4px rgba(0, 255, 0, 0.6)";
         score++;
     }
     else {
-        selectedCard.style.boxShadow = "0px 0px 10px 2px rgba(255, 0, 0, 0.75)";
+        selectedCard.style.boxShadow = "0px 0px 15px 4px rgba(255, 0, 0, 0.8)";
     }
     if (cardsContainer) {
         // Disable click events for all cards

@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", type="text/css", href="styles/style.css")
+    link(rel="stylesheet", type="text/css", href="styles/fonts.css")
+    link(rel="stylesheet", type="text/css", href="styles/header.css")
+    link(rel="stylesheet", type="text/css", href="styles/particles.css")
+  body
+    include dist/circles.html
+    div.container
+      div.sticky-header
+        div.header Welcome to our wedding!
+        div.subheader Pick the correct card
+        div.counter-and-next-button
+          div#dixit-phrase.dixit-phrase
+          div.counter#counter
+          div.next-button
+            div.next-arrow#next-arrow
+      div.card-container#card-container
+    script(src="dist/bundle.js")
