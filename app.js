@@ -18,7 +18,6 @@ const arrow = document.getElementById("next-arrow");
 const phrase = document.getElementById("dixit-phrase");
 let page = 1;
 let score = 0;
-let selectedCard = null;
 // Map to store the correct card number for each page
 const correctCards = new Map();
 correctCards.set(1, 3);
@@ -29,14 +28,9 @@ correctCards.set(5, 1);
 let maxPage = correctCards.size;
 // Function to update the cards for a given page
 const updateCards = (page) => {
-    const correctCard = correctCards.get(page);
-    if (!correctCard) {
-        return;
-    }
     if (cardsContainer) {
         // Clear the cards container
         while (cardsContainer.firstChild) {
-            console.log("remove child");
             cardsContainer.removeChild(cardsContainer.firstChild);
         }
         // Add cards
@@ -52,18 +46,17 @@ const updateCards = (page) => {
     }
 };
 const handleCardClick = (event) => {
-    const clickedCard = event.target;
+    const selectedCard = event.target;
     if (selectedCard) {
         selectedCard.style.boxShadow = "";
     }
-    if (clickedCard.dataset.correct) {
-        clickedCard.style.boxShadow = "0px 0px 10px 2px rgba(0, 255, 0, 0.75)";
+    if (selectedCard.id == `card${correctCards.get(page)}`) {
+        selectedCard.style.boxShadow = "0px 0px 10px 2px rgba(0, 255, 0, 0.75)";
         score++;
     }
     else {
-        clickedCard.style.boxShadow = "0px 0px 10px 2px rgba(255, 0, 0, 0.75)";
+        selectedCard.style.boxShadow = "0px 0px 10px 2px rgba(255, 0, 0, 0.75)";
     }
-    selectedCard = clickedCard;
     if (cardsContainer) {
         // Disable click events for all cards
         const cards = cardsContainer.children;
@@ -104,9 +97,7 @@ const handleArrowClick = () => {
     updatePhrase(page);
     updateArrowButton(page, true);
 };
-function randomInRange(min, max) {
-    return Math.random() * (max - min) + min;
-}
+
 function endGame(score, maxPoints) {
     // Calculate the percentage of correct answers
     const percentCorrect = Math.round((score / maxPoints) * 100);
