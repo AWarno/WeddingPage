@@ -2,6 +2,7 @@
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/add-to-calendar-button@2" async defer></script>
   </head>
   <body>
     <nav class="nav">
@@ -57,6 +58,19 @@
           <h2>Wedding</h2>
           <p class="italic">Save the date!</p>
           <p class="bold">wedding: <span class="date">17.06.2023</span> 15:00</p>
+          <div class="calendar-button">
+            <add-to-calendar-button
+              name="Ania & Mateusz"
+              options="'Apple','Google'"
+              location="Podkowa leśna"
+              startDate="2023-06-17"
+              endDate="2023-06-18"
+              startTime="15:00"
+              endTime="02:00"
+              timeZone="Europe/Warsaw"
+            
+            ></add-to-calendar-button>
+        </div>
           <p class="address">adres: podkowa Stanisława Lilpopa 17</p> 
           <p class="address">wedding reception: the same adres</p>
         </div>

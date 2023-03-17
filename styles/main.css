@@ -362,5 +362,12 @@ video {
     min-height: 45vw;
 }
 
+.calendar-button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
   
