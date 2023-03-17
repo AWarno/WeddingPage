@@ -34,7 +34,7 @@ function countdownTimer(dateString) {
         clearInterval(x);
         document.getElementById("countdown").innerHTML = "EXPIRED";
       }
-    }, 9000);
+    }, 1000);
   }
 
   // Call the countdownTimer function with the date string
